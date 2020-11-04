@@ -2,3 +2,18 @@
 
 // Uncomment the following line before publishing a News story
 // @import "styles/news-ellipsis";
+
+#my_dataviz svg {
+    margin: 0 auto;
+    display: block;
+}
+
+.link {
+    fill: none;
+    stroke: #6495ED;
+    stroke-opacity: .2;
+}
+
+.link:hover {
+    stroke-opacity: .5;
+}

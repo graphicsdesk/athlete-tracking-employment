@@ -4,6 +4,8 @@ import { intersectTop } from './scripts/utils';
 
 import { spectate as spectateConfig } from '../package.json';
 
+import './scripts/athletes';
+
 // Main page initiation
 
 initiatePage();
