@@ -33,7 +33,7 @@ console.log(graph.links)
 //dimensions & margins of the graph
 var margin = { top: 50, right: 50, bottom: 50, left: 50 },
   width = 960 - margin.left - margin.right,
-  height = 900 - margin.top - margin.bottom;
+  height = 800 - margin.top - margin.bottom;
 
 //append the svg object to the body of the page
 //just sets up your canvas
@@ -61,7 +61,10 @@ var link = svg
   .data(graph.links)
   .enter()
   .append('path')
-  .attr('class', 'link')
+  .attr('class', d => {
+      //if (d.target.node == 30) return 'finance'
+      return 'link'
+  })
   .attr('d', sankey.link())
 
   .style('stroke-width', function (d) {
