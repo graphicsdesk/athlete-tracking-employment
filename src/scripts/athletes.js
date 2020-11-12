@@ -24,9 +24,11 @@ blank,2,1,2,1,5,1,0,2,1,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,1,0`
 graph.links = graph.links.map(({ source, target, value }) => ({
   source,
   target,
-  value,
-  count: +counts.filter(c => c[0] === graph.nodes[target].name)[0][source + 1],
+  value: +counts.filter(c => c[0] === graph.nodes[target].name)[0][source + 1],
+  percent: value,
 }));
+
+console.log(graph.links)
 
 //dimensions & margins of the graph
 var margin = { top: 50, right: 50, bottom: 50, left: 50 },
