@@ -1,32 +1,32 @@
 {
     "nodes": [
-        {"node": 0, "name": "BASE"},
-        {"node": 1, "name": "MBB"},
-        {"node": 2, "name": "MXC/TCF"},
-        {"node": 3, "name": "MFENC"},
-        {"node": 4, "name": "FB"},
-        {"node": 5, "name": "MOLF"},
-        {"node": 6, "name": "LROW"},
-        {"node": 7, "name": "HROW"},
-        {"node": 8, "name": "MOC"},
-        {"node": 9, "name": "MSQU"},
-        {"node": 10, "name": "MSWIM"},
-        {"node": 11, "name": "MENNIS"},
-        {"node": 12, "name": "ARCH"},
-        {"node": 13, "name": "WBB"},
-        {"node": 14, "name": "WFENC"},
-        {"node": 15, "name": "FH"},
-        {"node": 16, "name": "WOLF"},
-        {"node": 17, "name": "LAX"},
-        {"node": 18, "name": "WROV"},
-        {"node": 19, "name": "WOCCER"},
-        {"node": 20, "name": "SOFTBALL"},
-        {"node": 21, "name": "WREST"},
-        {"node": 22, "name": "WSQUA"},
-        {"node": 23, "name": "WSWIM"},
-        {"node": 24, "name": "WENNIS"},
-        {"node": 25, "name": "WTF/XC"},
-        {"node": 26, "name": "VB"},
+        {"node": 0, "name": "Baseball"},
+        {"node": 1, "name": "Men's Basketball"},
+        {"node": 2, "name": "Men's Cross Country / Track & Field"},
+        {"node": 3, "name": "Men's Fencing"},
+        {"node": 4, "name": "Football"},
+        {"node": 5, "name": "Men's Golf"},
+        {"node": 6, "name": "Lightweight Rowing"},
+        {"node": 7, "name": "Heavyweight Rowing"},
+        {"node": 8, "name": "Men's Soccer"},
+        {"node": 9, "name": "Men's Squash"},
+        {"node": 10, "name": "Men's swimming"},
+        {"node": 11, "name": "Men's tennis"},
+        {"node": 12, "name": "Archery"},
+        {"node": 13, "name": "Women's Basketball"},
+        {"node": 14, "name": "Women's Fencing"},
+        {"node": 15, "name": "Field Hockey"},
+        {"node": 16, "name": "Women's Golf"},
+        {"node": 17, "name": "Lacrosse"},
+        {"node": 18, "name": "Women's Rowing"},
+        {"node": 19, "name": "Women's Soccer"},
+        {"node": 20, "name": "Softball"},
+        {"node": 21, "name": "Wrestling"},
+        {"node": 22, "name": "Women's Squash"},
+        {"node": 23, "name": "Women's Swimming"},
+        {"node": 24, "name": "Women's Tennis"},
+        {"node": 25, "name": "Women's Cross Country / Track & Field"},
+        {"node": 26, "name": "Volleyball"},
         {"node": 27, "name": "Finance"},
         {"node": 28, "name": "Graduate School"},
         {"node": 29, "name": "Tech"},
@@ -40,20 +40,20 @@
         {"node": 37, "name": "Military"},
         {"node": 38, "name": "Engineering"},
         {"node": 39, "name": "Law"},
-        {"node": 40, "name": "Government"},
-        {"node": 41, "name": "blank"}
+        {"node": 40, "name": "Government"}
+       
     ],
     "links": [
         {"source":0, "target": 27, "value": 66.66666666666666},
         {"source":0, "target": 28, "value": 9.523809523809524},
         {"source":0, "target": 30, "value": 9.523809523809524},
         {"source":0, "target": 31, "value": 4.761904761904762},
-        {"source":0, "target": 41, "value": 9.523809523809524},
+     
 
         {"source":1, "target": 27, "value": 40},
         {"source":1, "target": 29, "value": 10},
         {"source":1, "target": 30, "value": 40},
-        {"source":1, "target": 41, "value": 10},
+     
 
         {"source":2, "target": 27, "value": 37.93103448275862},
         {"source":2, "target": 28, "value": 13.793103448275861},
@@ -63,7 +63,7 @@
         {"source":2, "target": 32, "value": 6.896551724137931},
         {"source":2, "target": 34, "value": 17.24137931034483},
         {"source":2, "target": 37, "value": 3.4482758620689653},
-        {"source":2, "target": 41, "value": 6.896551724137931},
+       
 
         {"source":3, "target": 27, "value": 14.285714285714285},
         {"source":3, "target": 28, "value": 28.57142857142857},
@@ -72,7 +72,7 @@
         {"source":3, "target": 33, "value": 7.142857142857142},
         {"source":3, "target": 34, "value": 14.285714285714285},
         {"source":3, "target": 37, "value": 7.142857142857142},
-        {"source":3, "target": 41, "value": 7.142857142857142},
+      
 
         {"source":4, "target": 27, "value": 36.76470588235294},
         {"source":4, "target": 28, "value": 7.352941176470589},
@@ -87,14 +87,14 @@
         {"source":4, "target": 38, "value": 1.4705882352941175},
         {"source":4, "target": 39, "value": 2.941176470588235},
         {"source":4, "target": 40, "value": 1.4705882352941175},
-        {"source":4, "target": 41, "value": 11.76470588235294},
+        
 
         {"source":5, "target": 27, "value": 25},
         {"source":5, "target": 29, "value": 12.5},
         {"source":5, "target": 30, "value": 12.5},
         {"source":5, "target": 32, "value": 12.5},
         {"source":5, "target": 37, "value": 12.5},
-        {"source":5, "target": 41, "value": 25},
+       
 
         {"source":6, "target": 27, "value": 54.166666666666664},
         {"source":6, "target": 28, "value": 12.5},
@@ -103,7 +103,7 @@
         {"source":6, "target": 36, "value": 4.166666666666666},
         {"source":6, "target": 38, "value": 8.333333333333332},
         {"source":6, "target": 40, "value": 4.166666666666666},
-        {"source":6, "target": 41, "value": 4.166666666666666},
+      
 
         {"source":7, "target": 27, "value": 44},
         {"source":7, "target": 28, "value": 12},
@@ -113,7 +113,7 @@
         {"source":7, "target": 33, "value": 4},
         {"source":7, "target": 34, "value": 4},
         {"source":7, "target": 35, "value": 4},
-        {"source":7, "target": 41, "value": 8},
+      
 
         {"source":8, "target": 27, "value": 47.61904761904761},
         {"source":8, "target": 28, "value": 4.761904761904762},
@@ -122,7 +122,7 @@
         {"source":8, "target": 31, "value": 4.761904761904762},
         {"source":8, "target": 32, "value": 4.761904761904762},
         {"source":8, "target": 40, "value": 4.761904761904762},
-        {"source":8, "target": 41, "value": 4.761904761904762},
+     
 
         {"source":9, "target": 27, "value": 69.23076923076923},
         {"source":9, "target": 28, "value": 7.6923076923076925},
@@ -158,7 +158,7 @@
         {"source":14, "target": 33, "value": 20},
         {"source":14, "target": 34, "value": 13.333333333333334},
         {"source":14, "target": 35, "value": 6.666666666666667},
-        {"source":14, "target": 41, "value": 6.666666666666667},
+       
 
         {"source":15, "target": 27, "value": 40},
         {"source":15, "target": 28, "value": 20},
@@ -170,13 +170,13 @@
         {"source":16, "target": 27, "value": 20},
         {"source":16, "target": 30, "value": 20},
         {"source":16, "target": 33, "value": 40},
-        {"source":16, "target": 41, "value": 20},
+     
 
         {"source":17, "target": 27, "value": 52.94117647058824},
         {"source":17, "target": 28, "value": 23.52941176470588},
         {"source":17, "target": 32, "value": 5.88235294117647},
         {"source":17, "target": 33, "value": 5.88235294117647},
-        {"source":17, "target": 41, "value": 11.76470588235294},
+      
 
         {"source":18, "target": 27, "value": 22.727272727272727},
         {"source":18, "target": 28, "value": 22.727272727272727},
@@ -196,13 +196,13 @@
         {"source":19, "target": 33, "value": 5.88235294117647},
         {"source":19, "target": 34, "value": 5.88235294117647},
         {"source":19, "target": 39, "value": 5.88235294117647},
-        {"source":19, "target": 41, "value": 11.76470588235294},
+     
 
         {"source":20, "target": 27, "value": 33.33333333333333},
         {"source":20, "target": 28, "value": 11.11111111111111},
         {"source":20, "target": 34, "value": 22.22222222222222},
         {"source":20, "target": 40, "value": 11.11111111111111},
-        {"source":20, "target": 41, "value": 22.22222222222222},
+       
 
         {"source":21, "target": 27, "value": 39.285714285714285},
         {"source":21, "target": 28, "value": 7.142857142857142},
@@ -211,12 +211,12 @@
         {"source":21, "target": 31, "value": 21.428571428571427},
         {"source":21, "target": 34, "value": 7.142857142857142},
         {"source":21, "target": 36, "value": 3.571428571428571},
-        {"source":21, "target": 41, "value": 7.142857142857142},
+       
 
         {"source":22, "target": 27, "value": 42.857142857142854},
         {"source":22, "target": 30, "value": 28.57142857142857},
         {"source":22, "target": 32, "value": 14.285714285714285},
-        {"source":22, "target": 41, "value": 14.285714285714285},
+      
 
         {"source":23, "target": 27, "value": 42.10526315789473},
         {"source":23, "target": 28, "value": 21.052631578947366},
@@ -236,10 +236,10 @@
         {"source":25, "target": 35, "value": 6.896551724137931},
         {"source":25, "target": 39, "value": 6.896551724137931},
         {"source":25, "target": 40, "value": 13.793103448275861},
-        {"source":25, "target": 41, "value": 10.344827586206897},
+        
 
         {"source":26, "target": 27, "value": 62.5},
-        {"source":26, "target": 29, "value": 25},
-        {"source":26, "target": 41, "value": 12.5}
+        {"source":26, "target": 29, "value": 25}
+       
     ]
 }
