@@ -15,7 +15,13 @@
     {
       "type": "graphic",
       "value": {
-        "asset": "athletes.html"
+        "asset": "athletes.html",
+        "steps": [
+          "Out of 478 Columbia Aathletes graduated in 2017-2019, around 44 percent44% of them pursued employment in the financial services and consulting industries.",
+          "Among 27 sports teams, Baseball, Lightweight Rowing, Men's Squash, Men's Tennis, Women’s Tennis, Lacrosse, and Volleyball has over 50 percent% of the team enter into a career in finance or consulting.",
+          "On the Men's tennis team, which has the highest turnout for a career in finance among the 27 teams, 9 of the 10 team members graduated in 2017-2019 went into a career in finance or consulting.",
+          "Only 7.6% of these athletes continued to play in professional sports after graduation, which is the 4th most popular career option among all athletes."
+        ]
       }
     },
     {
