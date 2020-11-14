@@ -28,31 +28,11 @@ graph.links = graph.links.map(({ source, target, value }) => ({
   percent: value,
 }));
 
-console.log(graph.links)
-
-//dimensions & margins of the graph
-var margin = { top: 50, right: 50, bottom: 50, left: 50 },
-  width = 960 - margin.left - margin.right,
-  height = 800 - margin.top - margin.bottom;
-
+//===========================================================================//
 //append the svg object to the body of the page
 //just sets up your canvas
-var svg = d3
-  .select('#my_dataviz')
-  .append('svg')
-  .attr('width', width + margin.left + margin.right)
-  .attr('height', height + margin.top + margin.bottom)
-  .append('g')
-  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-//color scale
-var color = d3.scaleOrdinal(d3.schemeCategory40);
-
-//sankey diagram properties
-var sankey = d3.sankey().nodeWidth(15).nodePadding(10).size([width, height]);
-
-//make a new sankey generator with default
-sankey.nodes(graph.nodes).links(graph.links).layout(32); //what happens if I change layout???
+const div = d3.select('.my_dataviz');
+var svg = div.append('svg').append('g');
 
 //add links to diagram
 var link = svg
@@ -61,18 +41,7 @@ var link = svg
   .data(graph.links)
   .enter()
   .append('path')
-  .attr('class', d => {
-      //if (d.target.node == 30) return 'finance'
-      return 'link'
-  })
-  .attr('d', sankey.link())
-
-  .style('stroke-width', function (d) {
-    return Math.max(1, d.dy);
-  })
-  .sort(function (a, b) {
-    return b.dy - a.dy;
-  });
+  .attr('class', 'link');
 
 //add in the nodes
 var node = svg
@@ -81,65 +50,237 @@ var node = svg
   .data(graph.nodes)
   .enter()
   .append('g')
-  .attr('class', 'node')
-  .attr('transform', function (d) {
-    return 'translate(' + d.x + ',' + d.y + ')';
-  })
-  .call(
-    d3
-      .drag()
-      .subject(function (d) {
-        return d;
-      })
-      .on('start', function () {
-        this.parentNode.appendChild(this);
-      })
-      .on('drag', dragmove),
-  );
+  .attr('class', 'node');
 
 //make the node rectangles
-node
-  .append('rect')
-  .attr('x', d => d.x0)
-  .attr('y', d => d.y0)
-  .attr('height', function (d) {
-    return d.dy;
-  })
-  .attr('width', sankey.nodeWidth())
-  .style('fill', '#1E90FF');
-//     .style("fill", function (d) { return d.color = color(d.name.replace(/.*/, "")); });
-//.style("stroke", function (d) { return d3.rgb(d.color).darker(2); });
+node.append('rect');
 
 //add in the title for the nodes - this is just CSS styling
 node
   .append('text')
-  .attr('x', -6)
-  .attr('y', function (d) {
-    return d.dy / 2;
-  })
+  .attr('class', 'mels-text')
   .attr('dy', '.35em')
-  .attr('font-family', 'sans-serif')
-  .attr('text-anchor', 'end')
   .attr('transform', null)
   .text(function (d) {
     return d.name;
-  })
-  .filter(function (d) {
-    return d.x < width / 2;
-  })
-  .attr('x', 6 + sankey.nodeWidth())
-  .attr('text-anchor', 'start');
+  });
 
-//dragmove - for moving the nodes
-function dragmove(d) {
-  d3.select(this).attr(
-    'transform',
-    'translate(' +
-      d.x +
-      ',' +
-      (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) +
-      ')',
-  );
-  sankey.relayout();
-  link.attr('d', sankey.link());
+function handleResizeSankeyCharlotte() {
+  //dimensions & margins of the graph
+  const margin = { top: 50, right: 100, bottom: 50, left: 200 };
+
+  const isMobile = Math.min(960, document.body.clientWidth) < 460;
+  if (isMobile) {
+    margin.left = margin.right = 20;
+    margin.top = margin.bottom = 30;
+  }
+
+  const width =
+    Math.min(960, document.body.clientWidth) - margin.left - margin.right;
+  const height =
+    Math.min(800, document.body.clientHeight) - margin.top - margin.bottom;
+
+  div.style('height', height + margin.top + margin.bottom + 'px');
+  div
+    .select('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom);
+  svg.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  var sankey = d3.sankey().nodeWidth(15).nodePadding(10).size([width, height]);
+  sankey.nodes(graph.nodes).links(graph.links).layout(32);
+  link
+    .attr('d', sankey.link())
+    .style('stroke-width', function (d) {
+      return Math.max(1, d.dy);
+    })
+    .sort(function (a, b) {
+      return b.dy - a.dy;
+    });
+
+  node.attr('transform', function (d) {
+    return 'translate(' + d.x + ',' + d.y + ')';
+  });
+
+  //make the node rectangles
+  node
+    .select('rect')
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('height', function (d) {
+      return d.dy;
+    })
+    .attr('width', sankey.nodeWidth());
+  //     .style("fill", function (d) { return d.color = color(d.name.replace(/.*/, "")); });
+  //.style("stroke", function (d) { return d3.rgb(d.color).darker(2); });
+
+  //add in the title for the nodes - this is just CSS styling
+  const rightX = isMobile ? -6 : 20; // x-position for labels on the right
+  const leftX = 6 + (isMobile ? 1 : -1) * sankey.nodeWidth(); // x-position for labels on the right
+  node
+    .select('text')
+    .attr('x', rightX)
+    .attr('y', function (d) {
+      return d.dy / 2;
+    })
+    .attr('text-anchor', isMobile ? 'end' : 'start')
+    .filter(function (d) {
+      return d.x < width / 2;
+    })
+    .attr('x', leftX)
+    .attr('y', function (d) {
+      return d.dy / 2 + 1;
+    })
+    .attr('text-anchor', isMobile ? 'start' : 'end');
+
+  node
+    .selectAll('text')
+    .filter(d => d.node == 2 || d.node == 25 || d.node == 28)
+    .html(d => {
+      let list = d.name.split(' ');
+      let span1 = [];
+      let span2 = [];
+      for (let i = 0; i < list.length; i++) {
+        if (i < list.length / 2) {
+          span1.push(list[i]);
+        } else {
+          span2.push(list[i]);
+        }
+      }
+      span1 = span1.join(' ');
+      span2 = span2.join(' ');
+      return `<tspan dy="-0.2em">${span1}</tspan><tspan x="${
+        d.x < width / 2 ? leftX : rightX
+      }" dy="1em">${span2}</tspan>`;
+    });
 }
+
+handleResizeSankeyCharlotte();
+window.addEventListener('resize', handleResizeSankeyCharlotte);
+
+var main = d3.select('main');
+var scroll = main.select('#scroll');
+var diagram = scroll.select('.my_dataviz');
+var article = scroll.select('article');
+var step = article.selectAll('.step');
+
+//initialize scrollama
+var scroller = scrollama();
+
+//resize that window
+function handleResize() {
+  //update height of steps
+  var stepHeight = Math.floor(window.innerHeight * 0.75);
+  step.style('height', stepHeight + 'px');
+
+  var diagramHeight = window.innerHeight / 2;
+  var diagramMarginTop = (window.innerHeight - diagramHeight) / 6;
+
+  diagram
+    .style('height', diagramHeight + 'px')
+    .style('top', diagramMarginTop + 'px');
+
+  //update new element dimensions
+  scroller.resize();
+}
+
+//event handler
+function handleStepEnter(response) {
+  console.log(response);
+  svg.select('g').selectAll('.change').attr('class', 'link');
+
+  //adds color to the current step / text container
+  step.classed('is-active', function (d, i) {
+    return i === response.index;
+  });
+
+  //highlights all finance
+  if (response.index == 0) {
+    console.log('works ZERO');
+    svg
+      .select('g')
+      .selectAll('.link')
+      .attr('class', d => {
+        if (d.target.node == 27) return 'change';
+        return 'link';
+      });
+  }
+
+  //highlight the 7 teams
+  if (response.index == 1) {
+    console.log('works ONE');
+
+    svg
+      .select('g')
+      .selectAll('.link')
+      .attr('class', d => {
+        if (
+          (d.source.node == 0 ||
+            d.source.node == 6 ||
+            d.source.node == 9 ||
+            d.source.node == 11 ||
+            d.source.node == 24 ||
+            d.source.node == 17 ||
+            d.source.node == 26) &&
+          d.target.node == 27
+        )
+          return 'change';
+        return 'link';
+      });
+  }
+
+  //highlights the men's tennis team
+  if (response.index == 2) {
+    console.log('works TWO');
+    svg
+      .select('g')
+      .selectAll('.link')
+      .attr('class', d => {
+        if (d.source.node == 11 && (d.target.node == 27 || d.target.node == 28))
+          return 'change';
+        return 'link';
+      });
+  }
+
+  //highlights the athletics target
+  if (response.index == 3) {
+    console.log('works THREE');
+    svg
+      .select('g')
+      .selectAll('.link')
+      .attr('class', d => {
+        if (d.target.node == 30) return 'change';
+        return 'link';
+      });
+  }
+}
+
+function handleStepExit(response) {
+  console.log('exit');
+}
+
+function stepupStickyfill() {
+  d3.selectAll('.sticky').each(function () {
+    Stickyfill.add(this);
+  });
+}
+
+function init() {
+  stepupStickyfill();
+
+  handleResize();
+
+  scroller
+    .setup({
+      step: '#scroll article .step',
+      offset: document.body.clientWidth<459 ? 0.8 : 0.5,
+      debug: false,
+    })
+    .onStepEnter(handleStepEnter)
+    .onStepExit(handleStepExit);
+
+  window.addEventListener('resize', handleResize);
+}
+
+//light em up
+init();

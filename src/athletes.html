@@ -1,1 +1,10 @@
-<div id="my_dataviz"></div>
+<section id="scroll">
+  <div class="my_dataviz"></div>
+  <article>
+    <each loop="text, i in (item.value.steps || [])">
+      <div class="step" data-step="{{i+1}}">
+        <p class="paragraph">{{{ text }}}</p>
+      </div>
+    </each>
+  </article>
+</section>
