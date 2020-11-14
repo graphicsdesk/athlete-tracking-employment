@@ -67,12 +67,13 @@ node
 
 function handleResizeSankeyCharlotte() {
   //dimensions & margins of the graph
-  const margin = { top: 50, right: 100, bottom: 50, left: 200 };
+  const margin = { top: 70, right: 100, bottom: 50, left: 200 };
 
   const isMobile = Math.min(960, document.body.clientWidth) < 460;
   if (isMobile) {
     margin.left = margin.right = 20;
-    margin.top = margin.bottom = 30;
+    margin.top = 110;
+    margin.bottom = 10;
   }
 
   const width =

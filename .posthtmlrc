@@ -10,41 +10,241 @@
         "body": [
           {
             "type": "text",
-            "value": "Leadin. Something to draw the reader in. Graphics is the only visuals and words desk at the Spectator."
+            "value": "In a <a href=\"https://twitter.com/CULionsFB/status/1257341666786250753?s=20\">tweet</a> from May of this year, the official Columbia Football account cited a ranking that refers to Columbia as the best university in the country when it comes to obtaining a front-office position at investment banks. While many Columbia students strive to secure jobs in finance or consulting, Columbia Athletics in particular provides its athletes with abundant opportunities to pursue these careers once their days of competition on Columbia’s fields and courts are behind them."
           },
           {
             "type": "text",
-            "value": "Nutgraf. What is the meat of the story? Why does this matter?"
+            "value": "Ethan Abrams, a former baseball player who graduated Columbia College in 2019, welcomed the competitiveness of the University’s rigorous academic and athletic slate. However, it wasn’t until after he joined the Light Blue that he noticed many athletes were focused on pursuing jobs in the same industries in New York City."
+          },
+          {
+            "type": "text",
+            "value": "“I grew up in San Diego and never heard people talking about working on Wall Street, but when you’re at Columbia, everyone’s like, ‘I’m interning at Goldman Sachs this summer,’ and slowly it becomes the new normal.”"
+          },
+          {
+            "type": "text",
+            "value": "The history of Columbia Athletics isn’t as revered as the school’s academic reputation. Historically, Columbia’s football team is one of the Ivy League’s most unsuccessful—its 59-year drought for a conference title is by far the longest among the Ancient Eight. Across every sport, it’s rare for a Columbia athlete to pursue a professional athletic career. Many of Columbia’s facilities are 100 blocks uptown at the Baker Athletic Complex, meaning, for most sports, Columbia requires its athletes to travel extraordinary distances to attend practices and competitions, unlike its other Ivy League peers."
+          },
+          {
+            "type": "text",
+            "value": "The distance alone would be a hard sell for any athletics department, but Columbia Athletics tries to make up for the distance barrier through a robust career network and the infinite opportunities that a metropolis like Manhattan has to offer."
           },
           {
             "type": "graphic",
             "value": {
               "asset": "athletes.html",
               "steps": [
-                "Out of 478 Columbia Aathletes graduated in 2017-2019, around 44 percent44% of them pursued employment in the financial services and consulting industries.",
-                "Among 27 sports teams, Baseball, Lightweight Rowing, Men's Squash, Men's Tennis, Women’s Tennis, Lacrosse, and Volleyball has over 50 percent% of the team enter into a career in finance or consulting.",
-                "On the Men's tennis team, which has the highest turnout for a career in finance among the 27 teams, 9 of the 10 team members graduated in 2017-2019 went into a career in finance or consulting.",
-                "Only 7.6% of these athletes continued to play in professional sports after graduation, which is the 4th most popular career option among all athletes."
+                "Out of 478 Columbia athletes graduated in 2017-2019, around 44 percent of them pursued employment in the financial services and consulting industries.",
+                "Among 27 sports teams, baseball, lightweight rowing, men's squash, men's tennis, women’s tennis, lacrosse, and volleyball have over 50 percent of the team enter into a career in finance or consulting.",
+                "On the men's tennis team, which has the highest turnout for a career in finance among the 27 teams, 9 of the 10 team members graduated in 2017-19 went into a career in finance or consulting.",
+                "Only 7.6 percent of these athletes continued to play in professional sports after graduation, which is the third most popular career option among all athletes."
               ]
             }
           },
           {
             "type": "text",
-            "value": "<i>Melissa Wang is a Graphics reporter. She can be contacted at </i><a href=\"mailto:melissa.wang@columbiaspectator.com\"><i>melissa.wang@columbiaspectator.com</i></a><i>.</i>"
+            "value": "For swaths of student-athletes, there are two sectors into which Manhattan provides the smoothest gateway: the financial services and management consulting industries. Spectator tracked the career paths of Columbia Athletics graduates through LinkedIn and company websites and found that over 42 percent of Columbia College and School of Engineering and Applied Science athletes who’ve graduated from 2017 to 2019 chose to pursue a career in finance or consulting—a staggering concentration in career choice.The second largest professional career path was technology, at 6 percent."
           },
           {
             "type": "text",
-            "value": "<i>Charlotte Li is a Graphics deputy editor. She can be contacted at </i><a href=\"mailto:charlotte.li@columbiaspectator.com\"><i>charlotte.li@columbiaspectator.com</i></a><i>.</i>"
+            "value": "In a Beyond Columbia Survey conducted by the Center for Career Education in 2019, Columbia athletes found careers in financial services and consulting at a rate that was 8 percent higher than their peers. Career paths in the general student body were considerably more diverse, with more students pursuing fields like technology or seeking graduate programs."
+          },
+          {
+            "type": "text",
+            "value": "Though Columbia athletes come to the University to pursue a unique combination of academic and athletic experiences, once here, many student-athletes utilize the University’s deep system of career networks to matriculate to finance and consulting firms in New York City."
+          },
+          {
+            "type": "subhed",
+            "value": "“They’re always available”: The culture of opportunities"
+          },
+          {
+            "type": "text",
+            "value": "At one of Michael Murphy’s first football team meetings, he learned of Columbia Athletics’ career development program, a resource offered exclusively to athletes."
+          },
+          {
+            "type": "text",
+            "value": "“They did a great job of coming in and telling all the athletes what career development was and what it can provide to us as student-athletes at Columbia,” Murphy, who graduated from Columbia College in 2019, said. “They were one of the first people we met coming in, alongside our academic advisor. It didn’t take long.”"
+          },
+          {
+            "type": "text",
+            "value": "Perhaps the most consequential part of Columbia Athletics’ career development program is the extensive network of people in industries like finance and consulting that it offers access to. Though connections to alumni are provided to every team through formal networking events, different teams’ coaches and cultures provide exclusive inroads to these careers."
+          },
+          {
+            "type": "text",
+            "value": "The men’s and women’s tennis teams are examples of Columbia’s unique pathway into competitive industries; Spectator found that the tennis teams had the highest concentration of recent graduates pursuing finance and consulting."
+          },
+          {
+            "type": "text",
+            "value": "<a href=\"https://www.columbiaspectator.com/sports/2019/05/21/victor-pham-cc-19-played-tennis-for-his-family-on-the-court-and-his-family-off-the-court/\">Victor Pham</a>, a 2019 graduate of Columbia College, was a two-time Ivy League Player of the Year on the men’s tennis team. Pham was a skilled athlete who established himself both within the Ancient Eight and on a national level, reaching national ranks as high as No. 7 during his junior year. In addition to his success on the court, he mentioned the tennis team’s supportive culture, stewarded by head coach Howard Endelman, as the piece of his time at Columbia that he deems most special."
+          },
+          {
+            "type": "text",
+            "value": "“I got dinner with Howie [Endelman] two days ago … That should tell you the kind of tight relationship that we still have,” Pham said. “I still come to him with questions with post-grad stuff, whether that be work or another topic that I want his opinion on.”"
+          },
+          {
+            "type": "text",
+            "value": "Endelman, a 1987 Columbia College graduate, is an accomplished professional who worked at Merrill Lynch and founded a private equity investment firm based in India. He offered valuable advice and connections for tennis players interested in a Wall Street job, Pham emphasized."
+          },
+          {
+            "type": "text",
+            "value": "“Since the tennis team is a bit of a smaller group, we’re pretty close-knit, and it’s very easy for me as a student to reach out to an alum in a capacity I may be interested in,” Pham said. “I don’t think there’s anyone in the country who’s been as successful off the court in the professional world as Howie, and who is now a top tennis coach at a top-10 team.”"
+          },
+          {
+            "type": "text",
+            "value": "The men’s golf team enjoys a similar route into the world of Wall Street. The team’s volunteer assistant coach, <a href=\"https://www.columbiaspectator.com/sports/2020/10/27/amid-challenges-assistant-coaches-drive-every-athlete-forward/\">Stephen LaRouere</a>, graduated from the Lions’ golf team and Columbia College in 2013 to work at IBM and currently works at the investment firm Guggenheim Partners. He gives student-athletes interested in finance crucial help when starting their career journeys, offering advice and connections for them to speak to as well."
+          },
+          {
+            "type": "text",
+            "value": "“I review resumes, I certainly connect members of the team to certain alumni that I think could be helpful, I’ve given many mock interviews—when it comes to investment banking or consulting … I have a background in that, so I’m able to know what those interviews look like,” LaRouere said."
+          },
+          {
+            "type": "text",
+            "value": "Though career development is a central component of the support system offered to athletes, Columbia Athletics casts a wide net of programming to cultivate the professional development of its athletes. Its programs tend to mirror those offered to the rest of the student body, but a smaller community of athletes allows for a greater focus on each student."
+          },
+          {
+            "type": "text",
+            "value": "Associate Athletics Director for Enrichment Services Jessica De Palo explained that the Success Through Well-Being Initiative contains much of Columbia’s support system for its athletes, including services like mental health, athletic nutrition and sport psychology as well."
+          },
+          {
+            "type": "text",
+            "value": "While advisors like De Palo are continuously available for students to make appointments, the career help stretches further than one-on-one counseling. There are frequent seminars, panels, and networking events solely for athletes to attend."
+          },
+          {
+            "type": "text",
+            "value": "The athletic community is far smaller than the greater Columbia community, as there are only around 600 athletes who represent the Light Blue. The smaller concentration of students invited to these events creates a more intimate experience than the average career fair or panel."
+          },
+          {
+            "type": "text",
+            "value": "For Danielle Buttinger, a 2018 graduate of Columbia college, a former field hockey forward and current consultant at Sia Partners, Columbia’s networking opportunities helped jumpstart her career in New York."
+          },
+          {
+            "type": "text",
+            "value": "“Once a year, we would have a networking event where there’d be a panel of past athletes who would come in and talk about their jobs and we could ask questions about different industries and learn more about what alumni are up to in different areas that they’re in,” Buttinger remembered."
+          },
+          {
+            "type": "text",
+            "value": "She noted that it was the networking events in her sophomore year onward that provided significant help in her process."
+          },
+          {
+            "type": "text",
+            "value": "“One night [the event] would be marketing and sports, and anyone who was an alum in that industry would come back to campus, talk about their experience, and if you couldn’t make those nights they would provide you with a list of contacts with people who were open to having people reach out to them about questions or opportunities,” Buttinger said."
+          },
+          {
+            "type": "text",
+            "value": "While student groups at Columbia offer similar career development opportunities for their respective networks, the athletic department has a unique institutionalized outreach that elevates the quality of help every athlete receives."
+          },
+          {
+            "type": "text",
+            "value": "“Everybody who goes through Columbia knows how demanding the academics are, and I think it takes a real appreciation to understand how to balance all of that while being a Division I athlete. It’s a lot of time and sacrifice, and it really is an incredibly unique experience that, unless you’re a part of it, you don’t really understand exactly what it is,” LaRouere said."
+          },
+          {
+            "type": "subhed",
+            "value": "#OnlyHere: Career development’s impact on recruits"
+          },
+          {
+            "type": "text",
+            "value": "Follow any Columbia Athletics team or coach’s social media presence, and you’ll notice a recurring theme and hashtag: #OnlyHere, the program’s primary recruiting message that emphasizes Columbia’s unique position as an Ivy League institution in a sprawling city like New York. Posts with the hashtag frequently advertise New York as a stomping ground for students, both on a recreational and a professional level. The messaging certainly makes an impact on recruits, athletes said."
+          },
+          {
+            "type": "text",
+            "value": "“We had a coaching staff at the time, when I was coming out of high school, that was very active on social media, and specifically Twitter, and they would make these posts about the career development and the job placement figures amongst graduating seniors,” Murphy remembered."
+          },
+          {
+            "type": "text",
+            "value": "“They did a great job as a coaching staff at telling us that career development does such an excellent job at building that network and that, basically, at the end of the day, leads to a job after college.”"
+          },
+          {
+            "type": "text",
+            "value": "Pham agreed that the University’s career development program played a fundamental role in his decision to come to Columbia."
+          },
+          {
+            "type": "text",
+            "value": "“When I was looking at schools, there were three main things that I looked at: academics, tennis, and the third, most important one was career development. So, after I graduated, I wanted to know that that particular institution would help me set up myself for a good professional start, and it definitely swayed me; Howie Endelman’s experience on Wall Street was very enticing.”"
+          },
+          {
+            "type": "text",
+            "value": "Even more, the lack of opportunities for Columbia athletes to play their sports at the professional level centers turn recruits’ focus to pre-professional activities and postgraduate success."
+          },
+          {
+            "type": "text",
+            "value": "“They kind of recognize that most people aren’t going to stay in field hockey when they graduate, and they give you the tools and the opportunity to explore things at Columbia that have to do with post-grad,” Buttinger said."
+          },
+          {
+            "type": "text",
+            "value": "Since most sports at Columbia don’t facilitate a consistent pipeline to major sports leagues, Buttinger’s sentiment was shared among a number of athletes."
+          },
+          {
+            "type": "text",
+            "value": "“I knew I wasn’t going to play in the NFL or anything like that,” Murphy mused. “But I knew that the number one thing coming out of college was going to be getting a job, and I saw incredibly positive figures about students graduating and taking on a role pretty much right after graduation.”"
+          },
+          {
+            "type": "text",
+            "value": "LaRouere also noted that his specific role on the golf team, tailored to assist athletes with keen professional interests, played a prominent role in the program’s recruitment initiatives."
+          },
+          {
+            "type": "text",
+            "value": "“I think that Coach Mueller likes to highlight the fact that we have me as a resource, with career development, specifically. I’m not going to help anybody out with a golf swing or anything like that, but I am an outlet who is very familiar with our alumni network, so it’s definitely something that’s highlighted in our recruiting efforts,” he said."
+          },
+          {
+            "type": "subhed",
+            "value": "Sports beyond graduation"
+          },
+          {
+            "type": "text",
+            "value": "Columbia Athletics’ effects on its athletes last long after graduation. The career network stretches far beyond specific teams or even jobs; it’s an endless network of people willing to offer insight into the professional world."
+          },
+          {
+            "type": "text",
+            "value": "But while some may only think of their experience as an athlete as one that resulted in professional advantages, many also view the student-athlete experience as one that creates the intangible qualities that have made them who they are today. Murphy acknowledged the network’s facilitation of valuable opportunities, but said that being an athlete at Columbia cratered a deeper, more important impact on each athlete."
+          },
+          {
+            "type": "text",
+            "value": "“At the end of the day, the fact that you’re a Columbia student-athlete, no matter what sport you play, it says something about you. It says that you’re a hard-worker, you’re dedicated, you’re ambitious and I feel like no matter what sport you play, it says a lot about your character.”"
+          },
+          {
+            "type": "text",
+            "value": "One of the driving factors of the success of Columbia’s athletes comes from employers who have a persisting preference for student athletes. An athletic experience on a résumé makes a decidedly impactful difference for employers, especially if those employers were student-athletes as well, athletes explained."
+          },
+          {
+            "type": "text",
+            "value": "“Having the Columbia baseball network is huge, but having any athlete network is big because I can almost reach out to anyone who’s played college sports and say, ‘Look, we have these similarities, we have some common ground, you know I work well on a team. It really, really helps in your elevator pitch meeting when you’re in your early twenties trying to get a full-time job,”’ Abrams commented."
+          },
+          {
+            "type": "text",
+            "value": "In a world struck by the COVID-19 pandemic, with Ivy League sports on hold, the Columbia network hasn’t stopped churning, remaining one of the department’s strongest assets. In fact, Murphy said that the extra time from being at home meant that there were even more opportunities for students to connect to each other and alumni."
+          },
+          {
+            "type": "text",
+            "value": "“It seems that people, now more than ever, are willing to talk to us, and hear our story and hear how the pandemic has affected us,” Murphy said. “I’ve set up almost a hundred conversations with Columbia alumni who are happy to talk to me, and give any kind of advice and feedback that they may have.”"
+          },
+          {
+            "type": "text",
+            "value": "Ultimately, the Columbia Athletics network is an insulated community of opportunities and support, built to withstand challenges or difficulties that affect athletes."
+          },
+          {
+            "type": "text",
+            "value": "“Columbia Athletics will definitely help me in my career journey, through ups or downs, the network will always be there,” Abrams reflected."
+          },
+          {
+            "type": "text",
+            "value": "<i>Elizabeth Karpen and Clara Ence Morse contributed reporting.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Enjoy leafing through our Sports issue! </i>"
+          },
+          {
+            "type": "text",
+            "value": "<a href=\"https://www.columbiaspectator.com/eye/issue/XXVIII/10/\">Previous Issue</a> | <a href=\"https://www.columbiaspectator.com/eye/issue/XXVIII/7/\">More In This Issue</a>"
           }
         ],
-        "headline": "Athlete Employment story",
-        "date": "November 4, 2020",
-        "byline": "By Melissa Wang\nEdited by <a href=\"https://www.columbiaspectator.com/contributors/Charlotte-Li\">Charlotte Li</a>",
+        "headline": "For athletes, career networks unlock a world of opportunity in finance and consulting",
+        "date": "November 14, 2020",
+        "byline": "By <a href=\"https://www.columbiaspectator.com/contributors/Miles-Schachner/\">Miles Schachner</a>\nData reported by <a href=\"https://www.columbiaspectator.com/contributors/Elizabeth-Karpen/\">Elizabeth Karpen</a> and <a href=\"https://www.columbiaspectator.com/contributors/Clara-Ence-Morse/\">Clara Ence Morse</a>\nInteractive by <a href=\"https://www.columbiaspectator.com/contributors/Melissa-Wang/\">Melissa Wang</a> and <a href=\"https://www.columbiaspectator.com/contributors/Charlotte-Li/\">Charlotte Li</a>",
         "USE_NEWS_NAV": false,
-        "USE_EYE_NAV": false,
+        "USE_EYE_NAV": true,
         "USE_COVER_HED": false,
         "IS_EMBED": false,
-        "DOC_URL": "https://docs.google.com/document/d/1yiYqMW43C-T3rJIyJegd1ZDFcjxKv2XSM13F5nHPQkc/edit"
+        "DOC_URL": "https://docs.google.com/document/d/13XWs5WUDNYYpaVgTfBGRPjBnNNxoS80qFTSK8apu9Dw/edit#"
       }
     }
   }
