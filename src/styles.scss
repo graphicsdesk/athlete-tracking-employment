@@ -1,7 +1,11 @@
+#h1 {
+  font-style: normal;
+}
+
 @import 'styles/spectate';
 
 // Uncomment the following line before publishing a News story
-// @import "styles/news-ellipsis";
+@import "styles/news-ellipsis";
 
 .my_dataviz svg {
   margin: 0 auto;
@@ -49,7 +53,7 @@
   flex: 1;
 }
 
-article {
+#scroll article {
   position: relative;
   padding: 0 1rem;
   max-width: 35%;

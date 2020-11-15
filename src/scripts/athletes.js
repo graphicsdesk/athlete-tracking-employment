@@ -79,7 +79,8 @@ function handleResizeSankeyCharlotte() {
   const width =
     Math.min(960, document.body.clientWidth) - margin.left - margin.right;
   const height =
-    Math.min(800, document.body.clientHeight) - margin.top - margin.bottom;
+    Math.min(800, window.innerHeight) - margin.top - margin.bottom;
+  console.log(width, height);
 
   div.style('height', height + margin.top + margin.bottom + 'px');
   div
@@ -187,7 +188,6 @@ function handleResize() {
 
 //event handler
 function handleStepEnter(response) {
-  console.log(response);
   svg.select('g').selectAll('.change').attr('class', 'link');
 
   //adds color to the current step / text container
@@ -197,7 +197,6 @@ function handleStepEnter(response) {
 
   //highlights all finance
   if (response.index == 0) {
-    console.log('works ZERO');
     svg
       .select('g')
       .selectAll('.link')
@@ -209,8 +208,6 @@ function handleStepEnter(response) {
 
   //highlight the 7 teams
   if (response.index == 1) {
-    console.log('works ONE');
-
     svg
       .select('g')
       .selectAll('.link')
@@ -232,7 +229,6 @@ function handleStepEnter(response) {
 
   //highlights the men's tennis team
   if (response.index == 2) {
-    console.log('works TWO');
     svg
       .select('g')
       .selectAll('.link')
@@ -245,7 +241,6 @@ function handleStepEnter(response) {
 
   //highlights the athletics target
   if (response.index == 3) {
-    console.log('works THREE');
     svg
       .select('g')
       .selectAll('.link')
@@ -257,7 +252,6 @@ function handleStepEnter(response) {
 }
 
 function handleStepExit(response) {
-  console.log('exit');
 }
 
 function stepupStickyfill() {
