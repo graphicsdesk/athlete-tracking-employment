@@ -1,5 +1,5 @@
 import { spectate as spectateConfig } from '../../package.json';
-
+import 'babel-polyfill';
 /**
  * Put all initializer scripts into this init() function
  */

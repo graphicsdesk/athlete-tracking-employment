@@ -1,7 +1,12 @@
+import 'babel-polyfill';
 import graph from '../../data/athletes.json';
+import * as d4 from 'd3';
+import scrollama from 'scrollama';
+import Stickyfill from 'stickyfill';
 
 // Copy-pasta'd from ../../data/Tracking employment - just counts.csv
-const counts = `industry,BASE,MBB,MXC/TF,MFENC,FB,MOLF,LROW,HROW,MOC,MSQU,MSWIM,MENNIS,WREST,ARCH,WBB,WFENC,FH,WOLF,LAX,WROW,WOCCER,SOFTBALL,WSQUA,WSWIM,WENNIS,WTF/XC,VB
+const counts =
+  `industry,BASE,MBB,MXC/TF,MFENC,FB,MOLF,LROW,HROW,MOC,MSQU,MSWIM,MENNIS,WREST,ARCH,WBB,WFENC,FH,WOLF,LAX,WROW,WOCCER,SOFTBALL,WSQUA,WSWIM,WENNIS,WTF/XC,VB
 Finance,14,4,11,2,27,3,14,11,10,9,9,9,11,4,5,3,6,1,9,5,4,3,3,8,4,6,5
 Graduate School,2,0,4,4,6,0,3,3,1,1,1,1,2,2,3,1,3,0,4,5,3,2,0,4,0,7,0
 Technology,0,1,2,0,4,1,0,3,2,1,6,0,2,0,0,0,0,1,0,0,3,0,0,0,1,3,3
@@ -17,9 +22,9 @@ Engineering,0,0,0,0,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Law,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2,0
 Government,0,0,0,0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,4,0
 blank,2,1,2,1,5,1,0,2,1,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,1,0`
-  .split('\n')
-  .slice(1)
-  .map(s => s.split(','));
+    .split('\n')
+    .slice(1)
+    .map(s => s.split(','));
 
 graph.links = graph.links.map(({ source, target, value }) => ({
   source,
@@ -31,7 +36,7 @@ graph.links = graph.links.map(({ source, target, value }) => ({
 //===========================================================================//
 //append the svg object to the body of the page
 //just sets up your canvas
-const div = d3.select('.my_dataviz');
+const div = d4.select('.my_dataviz');
 var svg = div.append('svg').append('g');
 
 //add links to diagram
@@ -78,8 +83,7 @@ function handleResizeSankeyCharlotte() {
 
   const width =
     Math.min(960, document.body.clientWidth) - margin.left - margin.right;
-  const height =
-    Math.min(800, window.innerHeight) - margin.top - margin.bottom;
+  const height = Math.min(800, window.innerHeight) - margin.top - margin.bottom;
   console.log(width, height);
 
   div.style('height', height + margin.top + margin.bottom + 'px');
@@ -90,6 +94,7 @@ function handleResizeSankeyCharlotte() {
   svg.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
   var sankey = d3.sankey().nodeWidth(15).nodePadding(10).size([width, height]);
+  console.log(sankey);
   sankey.nodes(graph.nodes).links(graph.links).layout(32);
   link
     .attr('d', sankey.link())
@@ -114,7 +119,7 @@ function handleResizeSankeyCharlotte() {
     })
     .attr('width', sankey.nodeWidth());
   //     .style("fill", function (d) { return d.color = color(d.name.replace(/.*/, "")); });
-  //.style("stroke", function (d) { return d3.rgb(d.color).darker(2); });
+  //.style("stroke", function (d) { return d4.rgb(d.color).darker(2); });
 
   //add in the title for the nodes - this is just CSS styling
   const rightX = isMobile ? -6 : 20; // x-position for labels on the right
@@ -160,7 +165,7 @@ function handleResizeSankeyCharlotte() {
 handleResizeSankeyCharlotte();
 window.addEventListener('resize', handleResizeSankeyCharlotte);
 
-var main = d3.select('main');
+var main = d4.select('main');
 var scroll = main.select('#scroll');
 var diagram = scroll.select('.my_dataviz');
 var article = scroll.select('article');
@@ -251,11 +256,10 @@ function handleStepEnter(response) {
   }
 }
 
-function handleStepExit(response) {
-}
+function handleStepExit(response) {}
 
 function stepupStickyfill() {
-  d3.selectAll('.sticky').each(function () {
+  d4.selectAll('.sticky').each(function () {
     Stickyfill.add(this);
   });
 }
@@ -268,7 +272,7 @@ function init() {
   scroller
     .setup({
       step: '#scroll article .step',
-      offset: document.body.clientWidth<459 ? 0.8 : 0.5,
+      offset: document.body.clientWidth < 459 ? 0.8 : 0.5,
       debug: false,
     })
     .onStepEnter(handleStepEnter)
