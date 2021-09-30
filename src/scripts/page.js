@@ -1,17 +1,6 @@
-import { spectate as spectateConfig } from '../../package.json';
-import 'babel-polyfill';
-/**
- * Put all initializer scripts into this init() function
- */
+import './athletes';
 
-function init() {
-  // Your scripts here...
-
-  // If an artboard is on the page, load the ai2html resizer
-  if (document.querySelector('.g-artboard[data-min-width]')) {
-    import('./ai2html-resizer').then(p => p.default());
-  }
-}
+function init() {}
 
 /**
  * Replace the section#main node with the article content
@@ -21,23 +10,15 @@ const isOnSpectatorPage = window.location.host === 'www.columbiaspectator.com';
 const isOnContributorPage =
   window.location.pathname.indexOf('/contributors') === 0;
 
-const SECTION_MAIN_SELECTOR = 'section#main';
-const ARTICLE_SELECTOR =
-  '.pb-f-eye-article-article-body > .row > .col-xs-12 > .ab-article-body > .ab-article-content > article';
-const COMMENTS_SELECTOR = '.pb-f-article-disqus-new';
+const SECTION_MAIN_SELECTOR = 'div#fusion-app';
+const ARTICLE_SELECTOR = 'div#fusion-app > div > div';
 
 // Replaces section#main with article
 function hoistArticle() {
-  // Store nodes of interest
+  // Replace section#main with article
   const sectionMain = document.querySelector(SECTION_MAIN_SELECTOR);
   const article = document.querySelector(ARTICLE_SELECTOR);
-  const comments = document.querySelector(COMMENTS_SELECTOR);
-
-  // Replace section#main with article
   sectionMain.parentNode.replaceChild(article, sectionMain);
-
-  // Append comment section after article
-  article.parentNode.insertBefore(comments, article.nextSibling);
 
   // Arc SSRs elements like links and meta tags in Spectate's index.html <head>
   // into a paragraph, which takes up unwanted space thanks to Arc's CSS
@@ -54,17 +35,17 @@ function hoistArticle() {
 }
 
 // Runs hoistArticle() and stops RAF when necessary elements exist.
-// Stops after 5 seconds of trying.
-const TRY_TIME = 5000;
+// Stops after 3 seconds of trying.
+const TRY_TIME = 3000;
 let start = null;
-function prepareHoist(timestamp) {
+function ready(timestamp) {
   if (document.body && document.querySelector(SECTION_MAIN_SELECTOR)) {
     hoistArticle();
     return;
   }
   if (timestamp - (start || (start = timestamp)) < TRY_TIME) {
     // If the body element isn't found, run ready() again at the next frame
-    window.requestAnimationFrame(prepareHoist);
+    window.requestAnimationFrame(ready);
   } else {
     // After 5 seconds, stop requesting frames and just use window.onload
     console.log(
@@ -76,24 +57,11 @@ function prepareHoist(timestamp) {
   }
 }
 
-export default function () {
-  // If IntersectionObserver and IntersectionObserverEntry are not natively
-  // supported, load the polyfill.
-  if (
-    !('IntersectionObserver' in window) ||
-    !('IntersectionObserverEntry' in window) ||
-    !('isIntersecting' in window.IntersectionObserverEntry.prototype)
-  ) {
-    import('intersection-observer').then();
-  }
-
-  // Replace main page section with this project if we are on a Spectator story
-  // page and the project is not an embed
-  if (isOnSpectatorPage && !isOnContributorPage && !spectateConfig.IS_EMBED) {
-    window.requestAnimationFrame(prepareHoist);
-  } else {
-    init();
-  }
+// Initialize our ready() function.
+if (isOnSpectatorPage && !isOnContributorPage) {
+  window.requestAnimationFrame(ready);
+} else {
+  init();
 }
 
 /**
